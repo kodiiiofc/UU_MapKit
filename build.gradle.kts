@@ -4,9 +4,3 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
 }
 
-repositories {
-    mavenCentral()
-    maven {
-        url = uri("http://maven.google.com/")
-    }
-}

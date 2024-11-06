@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -6,15 +8,17 @@ plugins {
 android {
     namespace = "com.kodiiiofc.urbanuniversity.mapkit"
     compileSdk = 34
+    val mapkitApiKey = gradleLocalProperties(rootDir, providers)["MAPKIT_API_KEY"]
 
     defaultConfig {
         applicationId = "com.kodiiiofc.urbanuniversity.mapkit"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "MAPKIT_API_KEY", "\"${mapkitApiKey}\"")
     }
 
     buildTypes {
@@ -35,6 +39,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
