@@ -9,6 +9,7 @@ class MapKitApplication : Application() {
     private var haveApiKey = false
 
 
+
     override fun onCreate() {
         super.onCreate()
         setApiKey()
