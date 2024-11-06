@@ -54,4 +54,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation (libs.maps.mobile)
+
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutines")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutines")
+
+    implementation("com.google.android.gms:play-services-location:21.3.0")
 }
