@@ -60,4 +60,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutines")
 
     implementation("com.google.android.gms:play-services-location:21.3.0")
+
+    implementation ("com.yandex.android:maps.mobile:4.8.1-navikit")
+    implementation ("com.yandex.mapkit.styling:automotivenavigation:4.8.1")
+    implementation ("com.yandex.mapkit.styling:roadevents:4.8.1")
 }

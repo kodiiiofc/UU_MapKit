@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Определение местоположения</string>
+    <string name="traffic_fab">Показать пробки</string>
+    <string name="route_fab">Построить маршрут</string>
+    <string name="text_input_from">Откуда</string>
+    <string name="text_input_to">Куда</string>
 </resources>

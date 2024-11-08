@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -13,4 +13,70 @@
         android:layout_height="match_parent"
         android:text="Hello World!" />
 
-</FrameLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:contentDescription="@string/route_fab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.FloatingActionButton.Large.Primary"
+        android:id="@+id/route_fab"
+        android:src="@drawable/ic_route"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:contentDescription="@string/traffic_fab"
+        app:layout_constraintBottom_toTopOf="@id/route_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/margin_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/traffic_fab"
+        android:src="@drawable/ic_traffic"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/text_input_from"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text_input_layout_to"
+       android:layout_margin="@dimen/margin_small"
+        android:translationY="-160dp"
+        app:endIconMode="clear_text"
+        style="?attr/textInputOutlinedStyle"
+        app:boxBackgroundColor="?attr/colorSurface">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/from_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/text_input_to"
+        android:translationY="-160dp"
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_from"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+       android:layout_margin="@dimen/margin_small"
+        app:endIconMode="clear_text"
+        style="?attr/textInputOutlinedStyle"
+        app:boxBackgroundColor="?attr/colorSurface">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/to_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
